@@ -115,9 +115,9 @@ def api_to_postgres_photos():
 
 
 
-    photos_data = extract_from_api()
+    extract = extract_from_api()
     table_ready = create_table_if_not_exists()
-    load_result = load_to_postgres(photos_data)   
+    load_result = load_to_postgres(extract)   
     validate = validate_load(load_result)         
 
 
